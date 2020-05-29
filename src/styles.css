@@ -1,0 +1,220 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+
+html,
+body {
+  height: 100%;
+  display: table;
+}
+
+body {
+  font-family: "Open Sans" sans-serif;
+  line-height: 1;
+  margin: 30px;
+  height: 100%;
+  display: table;
+}
+
+img {
+  margin: 40px 65px;
+  border-radius: 15px;
+}
+
+.camera,
+.safari,
+.game {
+  display: flex;
+  margin: 10px 100px 100px 100px;
+}
+
+.camera .camera-icon,
+.safari .safari-icon,
+.game .game-icon {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 150px;
+}
+
+.camera .camera-icon {
+  background-color: #009e91;
+}
+
+.safari .safari-icon {
+  background-color: #d6f0f9;
+}
+
+.game .game-icon {
+  background-color: #f7a4a1;
+}
+
+.camera .c-content,
+.safari .s-content,
+.game .g-content {
+  background-color: #28394a;
+}
+
+.c-content {
+  width: 200px;
+  height: 150px;
+  display: table-cell;
+  text-align: center;
+  position: relative;
+  right: 190px;
+  top: 10px;
+}
+
+.s-content {
+  width: 200px;
+  height: 150px;
+  position: relative;
+  right: 200px;
+  top: 25px;
+  z-index: -1;
+}
+
+.g-content {
+  position: relative;
+  top: 90px;
+  right: 200px;
+  width: 200px;
+  height: 60px;
+}
+
+.content__title-c {
+  margin-top: 40px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.content__producer-c {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #e94665;
+  white-space: nowrap;
+}
+
+.content__button-c {
+  margin-left: 68px;
+  font-size: 11px;
+  color: white;
+  background-color: #e94665;
+  padding: 3px;
+  width: 60px;
+  height: 11px;
+  white-space: nowrap;
+}
+
+.content__title {
+  margin-top: 40px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+  top: 60px;
+  left: 10px;
+}
+
+.content__producer {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #e94665;
+  white-space: nowrap;
+  position: relative;
+  top: 60px;
+  left: 10px;
+}
+
+.content__button {
+  margin-left: 125px;
+  margin-top: 45px;
+  font-size: 11px;
+  color: white;
+  background-color: #e94665;
+  padding: 3px;
+  width: 60px;
+  height: 11px;
+  white-space: nowrap;
+}
+
+.content__title-g {
+  margin-top: 40px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+  bottom: 30px;
+  left: 10px;
+}
+
+.content__producer-g {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #e94665;
+  white-space: nowrap;
+  position: relative;
+  bottom: 30px;
+  left: 10px;
+}
+
+.content__button-g {
+  margin-left: 125px;
+  margin-top: 45px;
+  font-size: 11px;
+  color: white;
+  background-color: #e94665;
+  padding: 3px;
+  width: 60px;
+  height: 11px;
+  white-space: nowrap;
+  position: relative;
+  bottom: 85px;
+}
+
+.c-content {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.camera-icon:hover + .c-content {
+  opacity: 1;
+}
+
+.camera-icon + .c-content:hover {
+  opacity: 1;
+}
+
+.safari-icon {
+  transition: transform 0.7s ease-in-out;
+}
+
+.safari-icon:hover {
+  transform: scale(0.5);
+}
+
+.s-content {
+  opacity: 0;
+}
+
+.safari-icon:hover + .s-content {
+  opacity: 1;
+}
+
+.game-icon {
+  z-index: 2;
+}
+
+.g-content {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.game-icon:hover + .g-content {
+  top: 10px;
+}
