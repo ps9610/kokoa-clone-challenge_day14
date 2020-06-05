@@ -31,7 +31,6 @@ img {
 .safari .safari-icon,
 .game .game-icon {
   position: relative;
-  overflow: hidden;
   width: 200px;
   height: 150px;
 }
@@ -69,7 +68,7 @@ img {
   height: 150px;
   position: relative;
   right: 200px;
-  top: 25px;
+  top: 0px;
   z-index: -1;
 }
 
@@ -79,6 +78,7 @@ img {
   right: 200px;
   width: 200px;
   height: 60px;
+  z-index: -1;
 }
 
 .content__title-c {
@@ -189,32 +189,27 @@ img {
 }
 
 .safari-icon {
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 50% 20%;
+  /* ㄴ> .safari-icon:hover에 입력하면 X !! 
+  변형된 상태에서 돌아올 때 센터로 움직인 후 원상복귀됨*/
 }
 
 .safari-icon:hover {
-  transform: scale(0.5);
-}
-
-.s-content {
-  opacity: 0;
-}
-
-.safari-icon:hover + .s-content {
-  opacity: 1;
+  transform: scale(0.48);
 }
 
 .game-icon {
-  z-index: 2;
+  transition: all 0.4s ease-in-out;
+}
+
+.game-icon:hover {
+  transform: scaleY(0.8) translateY(-42%);
+  /* scaleY로 세로 간격을 좁혀주면서
+   translateY를 이용하여 그림을 위로 올려줌*/
 }
 
 .g-content {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-.game-icon:hover + .g-content {
-  top: 10px;
+  transform: translateY(-10%);
+  /* 원래 자리에서 -10만큼 올려 그림에 덮이도록 함*/
 }
